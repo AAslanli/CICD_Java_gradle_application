@@ -12,6 +12,7 @@ pipeline{
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
                         sh 'chmod +x gradlew'
                         sh 'echo "hello"'
+                        sh 'nc -zvw2 192.168.1.107 9000'
                         sh './gradlew sonarqube  -Dsonar.host.url="http://192.168.1.107:9000" -Dsonar.login=e2a7a0713476a174e7c2ca56f6129491a8527d39'
                     }   
                 }
