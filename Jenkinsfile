@@ -9,11 +9,11 @@ pipeline{
             }
             steps{
                 script {
-                    //withSonarQubeEnv(credentialsId: 'sonar-token') {
+                    withSonarQubeEnv(credentialsId: 'sonar-token') {
                         sh 'chmod +x gradlew'
                         //sh 'curl -u admin:admin123 "http://192.168.1.107:9000"'
-                        sh './gradlew sonarqube --stacktrace  -Dsonar.host.url="http://192.168.1.107:9000" --warning-mode all --info -Dsonar.login="admin" -Dsonar.password="admin123" '
-                   // }   
+                        sh './gradlew sonarqube --stacktrace  -Dsonar.host.url="http://192.168.1.107:9000" --warning-mode all'
+                    }   
                 }
             }
             
