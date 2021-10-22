@@ -11,7 +11,7 @@ pipeline{
                 script {
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
                         sh 'chmod +x gradlew'
-                        sh './gradlew sonarqube  --scan --debug   --stacktrace -Dsonar.host.url="http://192.168.1.107:9000" '
+                        sh './gradlew sonarqube --stacktrace -Dsonar.host.url="http://192.168.1.107:9000" '
                     }   
                 }
             }
