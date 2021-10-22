@@ -15,7 +15,7 @@ pipeline{
                         //sh './gradlew sonarqube --stacktrace  -Dsonar.host.url="http://192.168.1.107:9000" --warning-mode all'
                         sh 'pwd'
                         sh  'grep jenkins /etc/passwd'
-                    }   
+//                    }   
                 }
             }
             
