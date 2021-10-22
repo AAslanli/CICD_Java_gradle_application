@@ -33,10 +33,11 @@ sonarqube {
     }
 }
 
-jacocoTestReport {
+/***jacocoTestReport {
     reports {
         xml.enabled true
     }
 }
+***/ 
 
 
