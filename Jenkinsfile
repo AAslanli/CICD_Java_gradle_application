@@ -12,7 +12,6 @@ pipeline{
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
                        sh 'chmod +x gradlew'
                        //sh 'curl -u admin:admin123 "http://192.168.1.107:9000"'
-                       sh 'whoami'
                        sh "./gradlew sonarqube --stacktrace   --warning-mode all"
                                               
                     }
