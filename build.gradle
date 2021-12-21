@@ -4,6 +4,7 @@ plugins {
 	id 'java'
 	id 'war'
 	id 'org.sonarqube' version '3.3'
+	id 'jacoco'
 }
 
 group = 'com.example'
