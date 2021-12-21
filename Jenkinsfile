@@ -12,7 +12,7 @@ pipeline{
                     //withSonarQubeEnv(credentialsId: 'sonar-token') {
                         sh 'chmod +x gradlew'
                         sh 'curl -f -u admin:admin1 http://192.168.0.105:9000/api/system/health'
-                        sh './gradlew sonarqube --stacktrace  ' 
+                        sh './gradlew sonarqube --stacktrace -Dsonar.login="admin -Dsonar.password="admin1"  ' 
                     //}
                 }
             }
