@@ -35,7 +35,6 @@ jacocoTestReport {
 sonarqube {
     properties {
         property 'sonar.host.url', 'http://192.168.0.105:9000'
-        property 'sonar.login', 'admin'
-		property 'sonar.password', 'admin1'
+        property 'sonar.login', 'a0027d269a3a5d14e954df205d04a4e55f25a57a'
     }
 }
