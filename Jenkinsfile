@@ -10,10 +10,10 @@ pipeline{
             }
             steps{
                 script{
-                    withSonarQubeEnv(credentialsId: 'sonar-token') {
+                    //withSonarQubeEnv(credentialsId: 'sonar-token') {
                         sh 'chmod +x gradlew'
                         sh './gradlew sonarqube -Dsonar.login=admin -Dsonar.password=admin1' 
-                    }
+                    //}
                     timeout(time: 1, unit: 'HOURS') {
                         def qg = waitForQualityGate()
                          if (qg.status != 'OK') {
