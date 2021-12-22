@@ -15,10 +15,11 @@ pipeline{
                         sh './gradlew sonarqube -Dsonar.login=admin -Dsonar.password=admin1' 
                     //}
                     timeout(time: 1, unit: 'HOURS') {
-                      def qg = waitForQualityGate()
-                      if (qg.status != 'OK') {
+                        def qg = waitForQualityGate()
+                         if (qg.status != 'OK') {
                            error "Pipeline aborted due to quality gate failure: ${qg.status}"
-                      }
+                        }
+                    }
                 }
             }
            
